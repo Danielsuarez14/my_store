@@ -1,8 +1,8 @@
 import { Router } from 'express'
 const router = Router()
-import UsersService from '../api/services/users.js'
-import { createUserSchema, updateUserSchema, getUserSchema } from '../api/schemas/users.js'
-import { validatorHandler } from '../api/middlewares/validator_handler.js'
+import UsersService from '../services/users.js'
+import { createUserSchema, updateUserSchema, getUserSchema } from '../schemas/users.js'
+import { validatorHandler } from '../middlewares/validator_handler.js'
 const service = new UsersService
 
 router.get('/',(req, res) => {

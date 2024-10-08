@@ -1,7 +1,7 @@
-import ProductService from '../api/services/product.js'
+import ProductService from '../services/product.js'
 import { Router } from 'express'
-import { validatorHandler } from '../api/middlewares/validator_handler.js'
-import { createProductSchema, updateProductSchema, getProductSchema } from '../api/schemas/product.js'
+import { validatorHandler } from '../middlewares/validator_handler.js'
+import { createProductSchema, updateProductSchema, getProductSchema } from '../schemas/product.js'
 const router = Router()
 const service = new ProductService()
 
