@@ -6,17 +6,7 @@ const app = express()
 const PORT = 3001
 app.use(express.json())
 
-const whitelist = ['http://localhost:5500', 'http://myapp.co']
-const options = {
-    origin: (origin, callback) => {
-        if (whitelist.includes(origin)){
-            callback(null, true)
-        }else{
-            callback(new Error('Not permition'))
-        }
-    }
-}
-app.use(cors(options))
+app.use(cors())
 routerApi(app)
 app.use(logErrors)
 app.use(boomErrorHandler)
